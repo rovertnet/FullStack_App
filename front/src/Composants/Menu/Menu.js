@@ -9,21 +9,24 @@ function Menu() {
     return (
         <Navbar bg="light" expand="lg" className='navbar navbar-dark menu'>
             <Container>
-                <Navbar.Brand as={Link} to='/'>e-Roro shop</Navbar.Brand>
+                <Navbar.Brand>e-Roro shop</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Accueil</Nav.Link>
-                        <Nav.Link href="#link">A propos</Nav.Link>
+                        <Nav.Link as={Link} to='/'>Accueil</Nav.Link>
+                        <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                        <Nav.Link as={Link} to='/register' >S'inscrire</Nav.Link>
                         <NavDropdown title="Autres" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">
-                                Another action
+                            <NavDropdown.Item as={Link} to='/produit'>produits</NavDropdown.Item>
+                            <NavDropdown.Item >
+
                             </NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                            <NavDropdown.Item href="#action/3.3">
+
+                            </NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">
-                                Separated link
+
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>

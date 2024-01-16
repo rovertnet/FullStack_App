@@ -1,7 +1,8 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 import {Container,Pagination,Row,Col} from 'react-bootstrap';
 import Prod from './Product';
+
 const api = axios.create({
     baseURL:"http://localhost:4000/api/v1"
 });
@@ -10,6 +11,7 @@ function List() {
     const [listProd, setListProd] = useState([])
     const [numPage, setNumPage] = useState(1)
     const [totalPages, setTotalPage] = useState(1)
+
     useEffect(()=>{
         const   allProducts = async (req,res)=>{
             api.get("/products?page=" +numPage+ "&limite=5")
